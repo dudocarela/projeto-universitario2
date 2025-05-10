@@ -2,11 +2,191 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio da Duda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Duda Soares</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Resetando padrões de margin e padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f7fb;
+      padding-top: 60px; /* Para o conteúdo não ficar embaixo do menu */
+    }
+
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: top 0.3s ease-in-out;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00b894;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #b0b0b0;
+    }
+
+    /* Seção "Sobre" */
+    #about {
+      padding: 40px 0;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    #about h2 {
+      color: #007acc;
+    }
+
+    /* Seção de Projetos */
+    #projects {
+      padding: 40px 0;
+      background: #ffffff;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      width: 45%;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #00b894;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>Olá, eu sou a Duda! 👋</h1>
-  <p>Esse é meu portfólio universitário. Está no ar com GitHub Pages!</p>
+  <!-- Menu fixo -->
+  <nav>
+    <ul>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Portfólio de Duda Soares</h1>
+    <p>Ciência da Computação | Projetos de Programação e Design</p>
+  </header>
+
+  <!-- Sobre mim -->
+  <section id="about">
+    <h2>Sobre Mim</h2>
+    <p>Sou estudante de Ciência da Computação e sou apaixonada por dados, programação e design. Busco sempre aprender novas tecnologias e desafios, sempre com foco em melhorar minhas habilidades.</p>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projects">
+    <h2>Projetos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Projeto 1: Calculadora Básica</h3>
+        <p>Uma simples calculadora feita em HTML, CSS e JavaScript.</p>
+        <a href="https://github.com/dudocarela/projeto-universitario2" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Projeto 2: Portfólio Acadêmico</h3>
+        <p>Portfólio de projetos acadêmicos realizados na faculdade de Ciência da Computação.</p>
+        <a href="https://github.com/dudocarela/projeto-universitario2" target="_blank">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Feito com ♥ por Duda Soares</p>
+    <p><a href="https://www.linkedin.com/in/dudacarela/" target="_blank">Meu LinkedIn</a></p>
+  </footer>
+
+  <script>
+    // Animação de Scroll para o menu
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.querySelector("nav").style.top = "-60px"; // Esconde o menu quando rola para baixo
+      } else {
+        document.querySelector("nav").style.top = "0"; // Mostra o menu quando rola para cima
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  </script>
 </body>
 </html>
 
