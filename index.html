@@ -65,20 +65,22 @@
       margin-bottom: 1rem;
       color: #e6edf3;
     }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
+    .snake-container {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
-    li {
-      margin-bottom: 1rem;
-      position: relative;
-      padding-left: 1rem;
+    .snake-game {
+      background-color: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.1);
     }
-    li::before {
-      content: "•";
-      color: #58a6ff;
-      position: absolute;
-      left: 0;
+    canvas {
+      background-color: #000;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #58a6ff;
     }
     .contact a {
       display: inline-block;
@@ -89,76 +91,11 @@
     .contact a:hover {
       text-decoration: underline;
     }
-    .tech-icons img {
-      margin-right: 10px;
-      transition: transform 0.3s;
-    }
-    .tech-icons img:hover {
-      transform: scale(1.2);
-    }
-    .badges a {
-      margin: 5px;
-      display: inline-block;
-      transition: transform 0.3s;
-    }
-    .badges a:hover {
-      transform: scale(1.1);
-    }
-    canvas {
-      display: none;
-    }
     footer {
       text-align: center;
       padding: 2rem;
       color: #6e7681;
       font-size: 0.9rem;
-    }
-    .project {
-      background-color: #161b22;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 10px rgba(88,166,255,0.1);
-    }
-    .project h3 {
-      color: #58a6ff;
-    }
-    .project p {
-      color: #c9d1d9;
-    }
-    .button {
-      background-color: #238636;
-      padding: 0.5rem 1rem;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 0.5rem;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #2ea043;
-    }
-    .blog-section {
-      background-color: #0d1117;
-      border-left: 4px solid #58a6ff;
-      padding: 1.5rem;
-      margin-top: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(88,166,255,0.15);
-    }
-    .blog-section img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 1rem 0;
-    }
-    .blog-section h3 {
-      color: #58a6ff;
-    }
-    .blog-section p {
-      color: #c9d1d9;
-      margin-top: 1rem;
     }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
@@ -189,6 +126,19 @@
       <p>Uma calculadora simples feita com HTML, CSS e JavaScript para treinar conceitos de lógica e DOM.</p>
       <a href="https://github.com/dudocarela/calculadora" target="_blank" class="button">Ver Projeto</a>
     </div>
+    <div class="project">
+      <h3>Simulador de Gerenciamento de Hotel</h3>
+      <p>Trabalho de lógica matemática e teoria dos conjuntos, com foco em operações, interseções e elementos de modelagem de regras.</p>
+      <a href="https://github.com/dudocarela/hotel-simulador" target="_blank" class="button">Ver Projeto</a>
+    </div>
+  </section>
+
+  <section id="snake" class="snake-container">
+    <h2>Jogo da Cobrinha 🐍</h2>
+    <div class="snake-game">
+      <canvas id="snakeCanvas" width="400" height="400"></canvas>
+      <p>Use as setas do teclado para jogar!</p>
+    </div>
   </section>
 
   <section id="experiencias">
@@ -212,6 +162,9 @@
       <li>Bibliotecas como Pandas, NumPy e Matplotlib</li>
       <li>Estatística e Probabilidade</li>
       <li>Machine Learning com Scikit-Learn</li>
+      <li>Versionamento com Git e GitHub</li>
+      <li>Criação de portfólios com GitHub Pages</li>
+      <li>Integração com o LinkedIn</li>
     </ul>
 
     <h3>Minhas inspirações</h3>
@@ -231,16 +184,4 @@
       <img alt="duda-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
     </div>
     <div class="badges">
-      <a href="https://www.youtube.com/@eduarwda" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
-      <a href="https://www.instagram.com/imsoaares/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
-      <a href="https://discord.com/users/eduarwda%233069" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
-      <a href="mailto:dudasoaresdepaiva@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"></a>
-      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Eduarda Soares — Todos os direitos reservados
-  </footer>
-</body>
-</html>
+      <a href="https://www.youtube.com/@eduarwda" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&
