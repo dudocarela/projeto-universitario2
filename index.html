@@ -4,51 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio | Eduarda Soares</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
     body {
-      background-color: #f8f9fa;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      font-family: 'Inter', sans-serif;
       color: #212529;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     header {
       background: #fff;
       padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
       text-align: center;
+      animation: fadeInDown 1s ease-in-out;
     }
     header h1 {
-      font-size: 2rem;
-      color: #343a40;
+      font-size: 2.5rem;
+      color: #2c3e50;
     }
     header p {
       color: #6c757d;
       margin-top: 0.5rem;
+      font-size: 1.1rem;
     }
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 3rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
+      animation: fadeInUp 1.2s ease;
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #495057;
+      color: #343a40;
     }
     ul {
       list-style: none;
+      padding-left: 1rem;
     }
     li {
       margin-bottom: 1rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+    li::before {
+      content: "•";
+      color: #0077b6;
+      position: absolute;
+      left: 0;
     }
     .contact a {
-      display: block;
+      display: inline-block;
       color: #0077b6;
       text-decoration: none;
       margin-bottom: 0.5rem;
@@ -56,11 +69,41 @@
     .contact a:hover {
       text-decoration: underline;
     }
+    .tech-icons img {
+      margin-right: 10px;
+      transition: transform 0.3s;
+    }
+    .tech-icons img:hover {
+      transform: scale(1.2);
+    }
+    .badges a {
+      margin: 5px;
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .badges a:hover {
+      transform: scale(1.1);
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background: #fff3cd;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+    }
     footer {
       text-align: center;
       padding: 2rem;
       color: #adb5bd;
       font-size: 0.9rem;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -78,17 +121,18 @@
   <section id="projetos">
     <h2>Projetos</h2>
     <ul>
-      <li>
-        <strong>PortfolioHUB</strong> – Implantação de portfólio acadêmico utilizando GitHub Pages, Google Workspace, Git e Gemini.
-      </li>
-      <li>
-        <strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos com estrutura de dados simples.
-      </li>
+      <li><strong>PortfolioHUB</strong> – Implantação de portfólio acadêmico utilizando GitHub Pages, Google Workspace, Git e Gemini.</li>
+      <li><strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos com estrutura de dados simples.</li>
     </ul>
   </section>
 
   <section id="habilidades">
     <h2>Habilidades</h2>
+    <div class="tech-icons">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" height="30" width="40">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" height="30" width="40">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" height="30" width="40">
+    </div>
     <ul>
       <li>Proatividade e pensamento criativo</li>
       <li>Design gráfico e visual</li>
@@ -98,14 +142,41 @@
     </ul>
   </section>
 
+  <section id="joguinho">
+    <h2>Mini Joguinho</h2>
+    <canvas id="gameCanvas" width="300" height="150"></canvas>
+    <script>
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+      let x = 150;
+      let y = 75;
+      let dx = 2;
+      let dy = 2;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI * 2);
+        ctx.fillStyle = "#0077b6";
+        ctx.fill();
+        ctx.closePath();
+        x += dx;
+        y += dy;
+        if (x + 10 > canvas.width || x - 10 < 0) dx = -dx;
+        if (y + 10 > canvas.height || y - 10 < 0) dy = -dy;
+      }
+      setInterval(draw, 20);
+    </script>
+  </section>
+
   <section id="contato">
-    <h2>Contato</h2>
-    <div class="contact">
-      <a href="mailto:dudasoaresdepaiva@gmail.com">dudasoaresdepaiva@gmail.com</a>
-      <a href="https://www.instagram.com/imsoaares/" target="_blank">Instagram: @imsoaares</a>
-      <a href="https://github.com/dudocarela" target="_blank">GitHub: dudocarela</a>
-      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324" target="_blank">LinkedIn: Eduarda Soares</a>
-      <p>Discord: eduarwda$3069</p>
+    <h2>Contato & Redes</h2>
+    <div class="badges">
+      <a href="https://www.youtube.com/@eduarwda" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
+      <a href="https://www.instagram.com/imsoaares/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+      <a href="https://discord.com/users/eduarwda%233069" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+      <a href="mailto:dudasoaresdepaiva@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+      <a href="https://github.com/eduarwda" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
     </div>
   </section>
 
@@ -114,4 +185,5 @@
   </footer>
 </body>
 </html>
+
 
