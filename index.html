@@ -34,6 +34,25 @@
       margin-top: 0.5rem;
       font-size: 1.1rem;
     }
+    nav {
+      text-align: center;
+      background: #e3f2fd;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #023e8a;
+    }
     section {
       max-width: 900px;
       margin: 3rem auto;
@@ -113,6 +132,14 @@
     <p>Estudante de Ciência da Computação | Futura Dev</p>
   </header>
 
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#joguinho">Joguinho</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
   <section id="sobre">
     <h2>Sobre Mim</h2>
     <p>Oi! Meu nome é Eduarda Soares, sou estudante de Ciência da Computação e estou no primeiro semestre da faculdade. Sou apaixonada por design, tecnologia e estou sempre em busca de novos desafios para evoluir como profissional. Estou aprendendo Git, GitHub e desenvolvendo meu portfólio para mostrar minhas habilidades de forma profissional e criativa.</p>
@@ -123,6 +150,7 @@
     <ul>
       <li><strong>PortfolioHUB</strong> – Implantação de portfólio acadêmico utilizando GitHub Pages, Google Workspace, Git e Gemini.</li>
       <li><strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos com estrutura de dados simples.</li>
+      <li><strong>Cartão Interativo</strong> – Cartão digital de Dia dos Namorados com mensagem animada personalizado para a namorada.</li>
     </ul>
   </section>
 
@@ -185,5 +213,4 @@
   </footer>
 </body>
 </html>
-
 
