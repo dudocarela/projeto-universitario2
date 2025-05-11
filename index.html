@@ -13,7 +13,7 @@
     }
     body {
       background-color: #0d1117;
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-image: url('https://www.transparenttextures.com/patterns/black-felt.png');
       font-family: 'Inter', sans-serif;
       color: #f8f9fa;
       line-height: 1.6;
@@ -105,17 +105,60 @@
       transform: scale(1.1);
     }
     canvas {
-      display: block;
-      margin: 0 auto;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 8px;
+      display: none;
     }
     footer {
       text-align: center;
       padding: 2rem;
       color: #6e7681;
       font-size: 0.9rem;
+    }
+    .project {
+      background-color: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(88,166,255,0.1);
+    }
+    .project h3 {
+      color: #58a6ff;
+    }
+    .project p {
+      color: #c9d1d9;
+    }
+    .button {
+      background-color: #238636;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #2ea043;
+    }
+    .blog-section {
+      background-color: #0d1117;
+      border-left: 4px solid #58a6ff;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(88,166,255,0.15);
+    }
+    .blog-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    .blog-section h3 {
+      color: #58a6ff;
+    }
+    .blog-section p {
+      color: #c9d1d9;
+      margin-top: 1rem;
     }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
@@ -128,6 +171,76 @@
   </style>
 </head>
 <body>
-  <!-- O restante do conteúdo permanece igual -->
+  <header>
+    <h1>Eduarda Soares</h1>
+    <p>Estudante de Ciência da Computação | Futura Cientista de Dados</p>
+  </header>
+  <nav>
+    <a href="#projetos">Projetos</a>
+    <a href="#experiencias">Experiências</a>
+    <a href="#blog">Blog</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="project">
+      <h3>Calculadora Interativa</h3>
+      <p>Uma calculadora simples feita com HTML, CSS e JavaScript para treinar conceitos de lógica e DOM.</p>
+      <a href="https://github.com/dudocarela/calculadora" target="_blank" class="button">Ver Projeto</a>
+    </div>
+  </section>
+
+  <section id="experiencias">
+    <h2>Experiências Acadêmicas</h2>
+    <div class="project">
+      <h3>Implantação do PortfolioHUB</h3>
+      <p>Projeto desenvolvido como parte da disciplina de Introdução à Computação, utilizando ferramentas como Git, GitHub, Google Workspace e integração com o Google Gemini. O objetivo foi construir um portfólio acadêmico profissional com versionamento e publicação online.</p>
+      <a href="https://github.com/dudocarela/portfoliohub" target="_blank" class="button">Ver Repositório</a>
+    </div>
+  </section>
+
+  <section id="blog" class="blog-section">
+    <h2>Jornada rumo à Ciência de Dados</h2>
+    <h3>Por que escolhi esse caminho?</h3>
+    <p>Desde que comecei minha jornada em Ciência da Computação, descobri uma grande paixão por entender dados, transformar números em soluções e criar análises que impactam decisões. A área de Ciência de Dados une minha curiosidade, minha paixão por desafios e o desejo de gerar valor através da tecnologia.</p>
+    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Data_Science.jpg" alt="O que é ciência de dados">
+
+    <h3>O que estou estudando</h3>
+    <ul>
+      <li>Linguagens como Python e R</li>
+      <li>Bibliotecas como Pandas, NumPy e Matplotlib</li>
+      <li>Estatística e Probabilidade</li>
+      <li>Machine Learning com Scikit-Learn</li>
+    </ul>
+
+    <h3>Minhas inspirações</h3>
+    <p>Vejo a ciência de dados como a profissão do futuro, e quero contribuir com projetos que ajudem empresas a tomar decisões melhores. Gosto de acompanhar profissionais da área, ler artigos e participar de comunidades de tecnologia.</p>
+
+    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZcQH6sYLMKiEySTW4p5y1Q.jpeg" alt="Ferramentas de Data Science">
+
+    <h3>Meu objetivo</h3>
+    <p>Me tornar uma cientista de dados com forte base técnica, visão analítica e criatividade para resolver problemas reais. Essa é a carreira que quero construir!</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato & Redes</h2>
+    <div class="tech-icons">
+      <img alt="duda-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+      <img alt="duda-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+      <img alt="duda-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+    </div>
+    <div class="badges">
+      <a href="https://www.youtube.com/@eduarwda" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
+      <a href="https://www.instagram.com/imsoaares/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
+      <a href="https://discord.com/users/eduarwda%233069" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"></a>
+      <a href="mailto:dudasoaresdepaiva@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"></a>
+      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Eduarda Soares — Todos os direitos reservados
+  </footer>
 </body>
 </html>
