@@ -1,193 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Duda Soares</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Eduarda Soares</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Resetando padrões de margin e padding */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f4f7fb;
-      padding-top: 60px; /* Para o conteúdo não ficar embaixo do menu */
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
     }
-
-    /* Menu fixo */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #333;
-      color: white;
-      z-index: 100;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: top 0.3s ease-in-out;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-      position: relative;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.2em;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #00b894;
-    }
-
-    /* Cabeçalho */
     header {
-      background-color: #333;
-      color: white;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       text-align: center;
-      padding: 20px;
     }
-
     header h1 {
-      font-size: 2.5em;
+      font-size: 2rem;
+      color: #343a40;
     }
-
     header p {
-      font-size: 1.2em;
-      color: #b0b0b0;
+      color: #6c757d;
+      margin-top: 0.5rem;
     }
-
-    /* Seção "Sobre" */
-    #about {
-      padding: 40px 0;
-      background: #ffffff;
-      text-align: center;
+    section {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
-
-    #about h2 {
-      color: #007acc;
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #495057;
     }
-
-    /* Seção de Projetos */
-    #projects {
-      padding: 40px 0;
-      background: #ffffff;
+    ul {
+      list-style: none;
     }
-
-    .projects {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      flex-wrap: wrap;
+    li {
+      margin-bottom: 1rem;
     }
-
-    .project-card {
-      width: 45%;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-    }
-
-    /* Rodapé */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    footer a {
-      color: #00b894;
+    .contact a {
+      display: block;
+      color: #0077b6;
       text-decoration: none;
+      margin-bottom: 0.5rem;
     }
-
-    footer a:hover {
+    .contact a:hover {
       text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #adb5bd;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <!-- Menu fixo -->
-  <nav>
-    <ul>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-
-  <!-- Cabeçalho -->
   <header>
-    <h1>Portfólio de Duda Soares</h1>
-    <p>Ciência da Computação | Projetos de Programação e Design</p>
+    <h1>Eduarda Soares</h1>
+    <p>Estudante de Ciência da Computação | Futura Dev</p>
   </header>
 
-  <!-- Sobre mim -->
-  <section id="about">
+  <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou estudante de Ciência da Computação e sou apaixonada por dados, programação e design. Busco sempre aprender novas tecnologias e desafios, sempre com foco em melhorar minhas habilidades.</p>
+    <p>Oi! Meu nome é Eduarda Soares, sou estudante de Ciência da Computação e estou no primeiro semestre da faculdade. Sou apaixonada por design, tecnologia e estou sempre em busca de novos desafios para evoluir como profissional. Estou aprendendo Git, GitHub e desenvolvendo meu portfólio para mostrar minhas habilidades de forma profissional e criativa.</p>
   </section>
 
-  <!-- Projetos -->
-  <section id="projects">
+  <section id="projetos">
     <h2>Projetos</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Projeto 1: Calculadora Básica</h3>
-        <p>Uma simples calculadora feita em HTML, CSS e JavaScript.</p>
-        <a href="https://github.com/dudocarela/projeto-universitario2" target="_blank">Ver no GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Projeto 2: Portfólio Acadêmico</h3>
-        <p>Portfólio de projetos acadêmicos realizados na faculdade de Ciência da Computação.</p>
-        <a href="https://github.com/dudocarela/projeto-universitario2" target="_blank">Ver no GitHub</a>
-      </div>
+    <ul>
+      <li>
+        <strong>PortfolioHUB</strong> – Implantação de portfólio acadêmico utilizando GitHub Pages, Google Workspace, Git e Gemini.
+      </li>
+      <li>
+        <strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos com estrutura de dados simples.
+      </li>
+    </ul>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Proatividade e pensamento criativo</li>
+      <li>Design gráfico e visual</li>
+      <li>HTML, CSS, Git e GitHub</li>
+      <li>Inglês intermediário</li>
+      <li>Aprendizado rápido e comunicação</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="contact">
+      <a href="mailto:dudasoaresdepaiva@gmail.com">dudasoaresdepaiva@gmail.com</a>
+      <a href="https://www.instagram.com/imsoaares/" target="_blank">Instagram: @imsoaares</a>
+      <a href="https://github.com/dudocarela" target="_blank">GitHub: dudocarela</a>
+      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324" target="_blank">LinkedIn: Eduarda Soares</a>
+      <p>Discord: eduarwda$3069</p>
     </div>
   </section>
 
-  <!-- Rodapé -->
   <footer>
-    <p>Feito com ♥ por Duda Soares</p>
-    <p><a href="https://www.linkedin.com/in/dudacarela/" target="_blank">Meu LinkedIn</a></p>
+    &copy; 2025 Eduarda Soares. Todos os direitos reservados.
   </footer>
-
-  <script>
-    // Animação de Scroll para o menu
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function() {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
-        document.querySelector("nav").style.top = "-60px"; // Esconde o menu quando rola para baixo
-      } else {
-        document.querySelector("nav").style.top = "0"; // Mostra o menu quando rola para cima
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
-  </script>
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
 
