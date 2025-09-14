@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,11 +6,7 @@
   <title>Portfólio | Eduarda Soares</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
       font-family: 'Inter', sans-serif;
@@ -26,65 +21,32 @@
       text-align: center;
       animation: fadeInDown 1s ease-in-out;
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
-    }
-    header p {
-      color: #6c757d;
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-    }
+    header h1 { font-size: 2.5rem; color: #2c3e50; }
+    header p { color: #6c757d; margin-top: 0.5rem; font-size: 1.1rem; }
     section {
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1.5rem;
       animation: fadeInUp 1.2s ease;
     }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #343a40;
-    }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-    li {
-      margin-bottom: 1rem;
-      position: relative;
-      padding-left: 1rem;
-    }
-    li::before {
-      content: "•";
-      color: #0077b6;
-      position: absolute;
-      left: 0;
-    }
+    h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #343a40; }
+    ul { list-style: none; padding-left: 1rem; }
+    li { margin-bottom: 1rem; position: relative; padding-left: 1rem; }
+    li::before { content: "•"; color: #0077b6; position: absolute; left: 0; }
     .contact a {
       display: inline-block;
       color: #0077b6;
       text-decoration: none;
       margin-bottom: 0.5rem;
     }
-    .contact a:hover {
-      text-decoration: underline;
-    }
+    .contact a:hover { text-decoration: underline; }
     .tech-icons img {
       margin-right: 10px;
       transition: transform 0.3s;
     }
-    .tech-icons img:hover {
-      transform: scale(1.2);
-    }
-    .badges a {
-      margin: 5px;
-      display: inline-block;
-      transition: transform 0.3s;
-    }
-    .badges a:hover {
-      transform: scale(1.1);
-    }
+    .tech-icons img:hover { transform: scale(1.2); }
+    .badges a { margin: 5px; display: inline-block; transition: transform 0.3s; }
+    .badges a:hover { transform: scale(1.1); }
     canvas {
       display: block;
       margin: 0 auto;
@@ -92,67 +54,70 @@
       border: 1px solid #ced4da;
       border-radius: 8px;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #adb5bd;
-      font-size: 0.9rem;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    footer { text-align: center; padding: 2rem; color: #adb5bd; font-size: 0.9rem; }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
   <header>
     <h1>Eduarda Soares</h1>
-    <p>Estudante de Ciência da Computação | Futura Dev</p>
+    <p>Estudante de Ciência da Computação | Auxiliar Administrativa | Futura Desenvolvedora</p>
   </header>
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Oi! Meu nome é Eduarda Soares, sou estudante de Ciência da Computação e estou no primeiro semestre da faculdade. Sou apaixonada por design, tecnologia e estou sempre em busca de novos desafios para evoluir como profissional. Estou aprendendo Git, GitHub e desenvolvendo meu portfólio para mostrar minhas habilidades de forma profissional e criativa.</p>
+    <p>Oi! Meu nome é <strong>Eduarda Soares</strong>, tenho 19 anos e atualmente curso o primeiro semestre de <strong>Ciência da Computação</strong>. Trabalho como <strong>Auxiliar Administrativa na Vippim Segurança</strong>, onde desenvolvo habilidades de organização, gestão de processos e suporte operacional. Sou apaixonada por <strong>design, tecnologia e programação</strong>, e tenho como objetivo atuar como desenvolvedora, unindo minha criatividade com a lógica da computação. Sou proativa, dedicada e gosto de aprender coisas novas todos os dias.</p>
+  </section>
+
+  <section id="curriculo">
+    <h2>Currículo</h2>
+    <ul>
+      <li><strong>Formação Acadêmica:</strong> Ciência da Computação (1º semestre)</li>
+      <li><strong>Experiência Profissional:</strong> Auxiliar Administrativa – Vippim Segurança (2025 – atual)</li>
+      <li><strong>Idiomas:</strong> Português (nativo), Inglês intermediário</li>
+      <li><strong>Certificações:</strong> Git e GitHub (em andamento), Fundamentos de Lógica de Programação</li>
+    </ul>
   </section>
 
   <section id="projetos">
-    <h2>Projetos</h2>
+    <h2>Projetos Acadêmicos e Profissionais</h2>
     <ul>
-      <li><strong>PortfolioHUB</strong> – Implantação de portfólio acadêmico utilizando GitHub Pages, Google Workspace, Git e Gemini.</li>
-      <li><strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos com estrutura de dados simples.</li>
+      <li><strong>PortfolioHUB</strong> – Criação de um portfólio acadêmico com GitHub Pages, integração com Google Workspace e Gemini para automação.</li>
+      <li><strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos para simular gerenciamento de hospedagens.</li>
+      <li><strong>Apresentação: Robôs na Indústria, Saúde e Casa</strong> – Seminário explorando linguagens de programação e movimentação de robôs.</li>
     </ul>
   </section>
 
   <section id="habilidades">
-    <h2>Habilidades</h2>
+    <h2>Habilidades & Competências</h2>
     <div class="tech-icons">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" height="30" width="40">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" height="30" width="40">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" height="30" width="40">
     </div>
     <ul>
-      <li>Proatividade e pensamento criativo</li>
-      <li>Design gráfico e visual</li>
-      <li>HTML, CSS, Git e GitHub</li>
-      <li>Inglês intermediário</li>
-      <li>Aprendizado rápido e comunicação</li>
+      <li><strong>Técnicas:</strong> HTML, CSS, Git, GitHub, Python básico</li>
+      <li><strong>Pessoais:</strong> Proatividade, comunicação, organização, aprendizado rápido</li>
+      <li><strong>Extras:</strong> Design gráfico, criação de apresentações, trabalho em equipe</li>
+    </ul>
+  </section>
+
+  <section id="recomendacoes">
+    <h2>Recomendações & Testemunhos</h2>
+    <ul>
+      <li>"Eduarda é uma aluna dedicada, curiosa e criativa. Sempre busca ir além do conteúdo e tem grande potencial para crescer na área da computação." – <em>Professor de Lógica de Programação</em></li>
+      <li>"No ambiente profissional, Eduarda se destaca pela responsabilidade e pela rapidez em aprender novas tarefas." – <em>Supervisora na Vippim Segurança</em></li>
     </ul>
   </section>
 
   <section id="joguinho">
-    <h2>Mini Joguinho</h2>
+    <h2>Mini Joguinho 🎮</h2>
     <canvas id="gameCanvas" width="300" height="150"></canvas>
     <script>
       const canvas = document.getElementById("gameCanvas");
       const ctx = canvas.getContext("2d");
-      let x = 150;
-      let y = 75;
-      let dx = 2;
-      let dy = 2;
+      let x = 150, y = 75, dx = 2, dy = 2;
       function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
@@ -160,8 +125,7 @@
         ctx.fillStyle = "#0077b6";
         ctx.fill();
         ctx.closePath();
-        x += dx;
-        y += dy;
+        x += dx; y += dy;
         if (x + 10 > canvas.width || x - 10 < 0) dx = -dx;
         if (y + 10 > canvas.height || y - 10 < 0) dy = -dy;
       }
