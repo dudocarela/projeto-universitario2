@@ -4,131 +4,100 @@
 <meta charset="UTF-8">
 <title>Eduarda Soares | Data Science</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: #ffffff;
-  color: #111;
+body{
+  font-family:'Inter',sans-serif;
+  background:#fff;
+  color:#111;
 }
 
-/* NAVBAR */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(10px);
-}
-
-nav a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 20px;
-  font-size: 0.9rem;
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
 }
 
 /* HERO */
-header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 60px;
+header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
 }
 
-.hero {
-  max-width: 600px;
+.hero h1{
+  font-size:4rem;
+  line-height:1.1;
+  font-weight:500;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+.hero p{
+  margin-top:20px;
+  color:#555;
+  max-width:500px;
 }
 
-.hero p {
-  margin-top: 20px;
-  color: #555;
-  font-size: 1.1rem;
+/* SEÇÕES */
+section{
+  max-width:1100px;
+  margin:120px auto;
+  padding:0 60px;
 }
 
-/* SCROLL ANIMATION */
-.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+h2{
+  font-size:0.9rem;
+  letter-spacing:2px;
+  color:#888;
+  margin-bottom:30px;
 }
 
-.show {
-  opacity: 1;
-  transform: translateY(0);
+/* GRID PROJETOS */
+.projects{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
 }
 
-/* SECTIONS */
-section {
-  max-width: 1000px;
-  margin: 120px auto;
-  padding: 0 40px;
+.project{
+  padding:25px;
+  border:1px solid #eee;
+  border-radius:10px;
+  transition:0.3s;
 }
 
-h2 {
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 20px;
-}
-
-/* PROJECTS */
-.project {
-  padding: 30px 0;
-  border-bottom: 1px solid #eee;
-  transition: 0.3s;
-}
-
-.project:hover {
-  transform: translateX(10px);
-}
-
-.project span {
-  font-size: 0.8rem;
-  color: #999;
-}
-
-.project h3 {
-  margin: 10px 0;
+.project:hover{
+  transform:translateY(-8px);
 }
 
 /* DATABASE */
-.database {
-  background: #f8f9fa;
-  padding: 30px;
-  border-radius: 10px;
+.database{
+  background:#f7f7f7;
+  padding:40px;
+  border-radius:10px;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 18px;
-  border: 1px solid #111;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #111;
-  color: #fff;
+/* ANIMAÇÃO INICIAL */
+.fade{
+  opacity:0;
+  transform:translateY(50px);
 }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 60px;
-  color: #aaa;
+footer{
+  text-align:center;
+  padding:60px;
+  color:#aaa;
 }
 </style>
 </head>
@@ -137,79 +106,65 @@ footer {
 
 <nav>
   <strong>Eduarda</strong>
-  <div>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#dados">Dados</a>
-    <a href="#contato">Contato</a>
-  </div>
 </nav>
 
 <header>
   <div class="hero">
-    <h1>Construindo soluções com dados</h1>
-    <p>
-      Estudante de Ciência de Dados focada em análise, organização e criação de projetos inteligentes baseados em dados.
+    <h1 class="title">Construindo soluções com dados</h1>
+    <p class="subtitle">
+      Estudante de Ciência de Dados focada em análise, organização e criação de soluções inteligentes.
     </p>
   </div>
 </header>
 
-<section id="sobre" class="hidden">
-  <h2>Sobre</h2>
+<section class="fade">
+  <h2>SOBRE</h2>
   <p>
-    Sou estudante de Ciência de Dados com interesse em transformar informações em soluções práticas.
-    Tenho experiência com organização de dados, criação de datasets e desenvolvimento de projetos acadêmicos.
+    Sou estudante de Ciência de Dados com interesse em transformar dados em soluções práticas.
+    Tenho experiência com criação de datasets, organização de dados e desenvolvimento de projetos acadêmicos.
   </p>
 </section>
 
-<section id="projetos" class="hidden">
-  <h2>Projetos</h2>
+<section class="fade">
+  <h2>PROJETOS</h2>
 
-  <div class="project">
-    <span>Banco de Dados</span>
-    <h3>Criação de Dataset</h3>
-    <p>Desenvolvimento de dataset estruturado para análise de dados e organização de informações.</p>
+  <div class="projects">
+
+    <div class="project">
+      <h3>Criação de Dataset</h3>
+      <p>Estruturação e organização de dados para análise.</p>
+    </div>
+
+    <div class="project">
+      <h3>Simulador de Hotel</h3>
+      <p>Aplicação de lógica matemática.</p>
+    </div>
+
+    <div class="project">
+      <h3>PortfolioHUB</h3>
+      <p>Portfólio com GitHub Pages.</p>
+    </div>
+
+    <div class="project">
+      <h3>Projeto de Banco de Dados</h3>
+      <p>Modelagem e organização de informações.</p>
+    </div>
+
   </div>
-
-  <div class="project">
-    <span>Lógica</span>
-    <h3>Simulador de Hotel</h3>
-    <p>Projeto utilizando teoria dos conjuntos para simular gerenciamento de hospedagem.</p>
-  </div>
-
-  <div class="project">
-    <span>Web</span>
-    <h3>PortfolioHUB</h3>
-    <p>Portfólio digital com GitHub Pages apresentando projetos e evolução na área.</p>
-  </div>
-
 </section>
 
-<section id="dados" class="hidden">
-  <h2>Banco de Dados</h2>
+<section class="fade">
+  <h2>BANCO DE DADOS</h2>
 
   <div class="database">
+    <p><strong>Experiência prática:</strong></p>
     <p>
-      Experiência prática com organização e estruturação de dados,
-      incluindo criação de datasets e aplicação de lógica para análise.
-    </p>
-
-    <p><strong>Principais competências:</strong></p>
-    <p>
-      - Modelagem básica de dados<br>
-      - Organização de datasets<br>
-      - Pensamento analítico<br>
-      - Estruturação de informações
+      • Criação de datasets<br>
+      • Estruturação de dados<br>
+      • Organização de informações<br>
+      • Pensamento analítico
     </p>
   </div>
-</section>
-
-<section id="contato" class="hidden">
-  <h2>Contato</h2>
-  <p>Email: dudasoaresdepaiva@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/eduarda-soares-de-paiva</p>
-
-  <a class="btn" href="#">Baixar currículo</a>
 </section>
 
 <footer>
@@ -217,15 +172,23 @@ footer {
 </footer>
 
 <script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
+
+/* HERO */
+gsap.from(".title",{y:80,opacity:0,duration:1});
+gsap.from(".subtitle",{y:40,opacity:0,duration:1,delay:0.3});
+
+/* SCROLL */
+const sections = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      gsap.to(sec,{opacity:1,y:0,duration:1});
     }
   });
 });
 
-document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 </script>
 
 </body>
