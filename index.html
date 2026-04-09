@@ -1,180 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Eduarda Soares | Ciência de Dados</title>
+<meta charset="UTF-8">
+<title>Eduarda Soares | Data Science</title>
 
-  <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Partículas suaves -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #111;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8f9fa;
-      color: #212529;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+}
 
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      opacity: 0.3;
-    }
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
 
-    header {
-      padding: 100px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
+.hero {
+  max-width: 600px;
+}
 
-    .subtitle {
-      font-size: 1.2rem;
-      color: #6c757d;
-      max-width: 500px;
-    }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+}
 
-    section {
-      max-width: 900px;
-      margin: 80px auto;
-      padding: 0 20px;
-    }
+.hero p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 1.1rem;
+}
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
 
-    p {
-      color: #495057;
-      line-height: 1.7;
-    }
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
+/* SECTIONS */
+section {
+  max-width: 1000px;
+  margin: 120px auto;
+  padding: 0 40px;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #e9ecef;
-      transition: 0.3s;
-    }
+h2 {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 20px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+/* PROJECTS */
+.project {
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
 
-    .tag {
-      font-size: 0.8rem;
-      color: #868e96;
-      margin-bottom: 10px;
-    }
+.project:hover {
+  transform: translateX(10px);
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #adb5bd;
-      font-size: 0.9rem;
-    }
+.project span {
+  font-size: 0.8rem;
+  color: #999;
+}
 
-    @media (max-width: 700px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.project h3 {
+  margin: 10px 0;
+}
+
+/* DATABASE */
+.database {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border: 1px solid #111;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 60px;
+  color: #aaa;
+}
+</style>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<nav>
+  <strong>Eduarda</strong>
+  <div>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#dados">Dados</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
 
 <header>
-  <h1>Eduarda Soares</h1>
-  <p class="subtitle">
-    Estudante de Ciência de Dados, focada em transformar dados em soluções inteligentes.
-    Tenho interesse em análise de dados, banco de dados e desenvolvimento de projetos práticos.
-  </p>
+  <div class="hero">
+    <h1>Construindo soluções com dados</h1>
+    <p>
+      Estudante de Ciência de Dados focada em análise, organização e criação de projetos inteligentes baseados em dados.
+    </p>
+  </div>
 </header>
 
-<section>
-  <h2>Sobre mim</h2>
+<section id="sobre" class="hidden">
+  <h2>Sobre</h2>
   <p>
-    Atualmente curso Ciência de Dados e venho desenvolvendo projetos acadêmicos focados em lógica, análise e estruturação de dados.
-    Tenho experiência com organização de informações, criação de datasets e desenvolvimento de soluções baseadas em dados.
-    Busco evoluir constantemente e construir projetos que gerem impacto real.
+    Sou estudante de Ciência de Dados com interesse em transformar informações em soluções práticas.
+    Tenho experiência com organização de dados, criação de datasets e desenvolvimento de projetos acadêmicos.
   </p>
 </section>
 
-<section>
+<section id="projetos" class="hidden">
   <h2>Projetos</h2>
 
-  <div class="grid">
+  <div class="project">
+    <span>Banco de Dados</span>
+    <h3>Criação de Dataset</h3>
+    <p>Desenvolvimento de dataset estruturado para análise de dados e organização de informações.</p>
+  </div>
 
-    <div class="card">
-      <div class="tag">Banco de Dados</div>
-      <h3>Criação de Dataset</h3>
-      <p>
-        Desenvolvimento de um dataset estruturado para simulação de análise de dados,
-        aplicando conceitos de modelagem e organização de informações.
-      </p>
-    </div>
+  <div class="project">
+    <span>Lógica</span>
+    <h3>Simulador de Hotel</h3>
+    <p>Projeto utilizando teoria dos conjuntos para simular gerenciamento de hospedagem.</p>
+  </div>
 
-    <div class="card">
-      <div class="tag">Lógica</div>
-      <h3>Simulador de Hotel</h3>
-      <p>
-        Projeto utilizando lógica matemática e teoria dos conjuntos para simular um sistema de gerenciamento.
-      </p>
-    </div>
+  <div class="project">
+    <span>Web</span>
+    <h3>PortfolioHUB</h3>
+    <p>Portfólio digital com GitHub Pages apresentando projetos e evolução na área.</p>
+  </div>
 
-    <div class="card">
-      <div class="tag">Web</div>
-      <h3>PortfolioHUB</h3>
-      <p>
-        Desenvolvimento de um portfólio digital com GitHub Pages, apresentando projetos e habilidades.
-      </p>
-    </div>
+</section>
 
-    <div class="card">
-      <div class="tag">Apresentação</div>
-      <h3>Robótica</h3>
-      <p>
-        Seminário sobre aplicações de robôs na indústria, saúde e ambiente doméstico.
-      </p>
-    </div>
+<section id="dados" class="hidden">
+  <h2>Banco de Dados</h2>
 
+  <div class="database">
+    <p>
+      Experiência prática com organização e estruturação de dados,
+      incluindo criação de datasets e aplicação de lógica para análise.
+    </p>
+
+    <p><strong>Principais competências:</strong></p>
+    <p>
+      - Modelagem básica de dados<br>
+      - Organização de datasets<br>
+      - Pensamento analítico<br>
+      - Estruturação de informações
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>Habilidades</h2>
-  <p>
-    HTML, CSS, Git, GitHub, Python básico, organização de dados, criação de datasets,
-    pensamento lógico e resolução de problemas.
-  </p>
-</section>
-
-<section>
+<section id="contato" class="hidden">
   <h2>Contato</h2>
   <p>Email: dudasoaresdepaiva@gmail.com</p>
   <p>LinkedIn: linkedin.com/in/eduarda-soares-de-paiva</p>
+
+  <a class="btn" href="#">Baixar currículo</a>
 </section>
 
 <footer>
@@ -182,16 +217,15 @@
 </footer>
 
 <script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 40 },
-    color: { value: "#adb5bd" },
-    shape: { type: "circle" },
-    opacity: { value: 0.3 },
-    size: { value: 2 },
-    move: { speed: 1 }
-  }
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
 });
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 </script>
 
 </body>
