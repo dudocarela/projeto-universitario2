@@ -1,152 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Eduarda Soares</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Eduarda Soares | Ciência de Dados</title>
+
+  <!-- Fonte elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Partículas suaves -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
-      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
       font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
       color: #212529;
-      line-height: 1.6;
-      overflow-x: hidden;
     }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
     header {
-      background: #fff;
-      padding: 2rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      animation: fadeInDown 1s ease-in-out;
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: auto;
     }
-    header h1 { font-size: 2.5rem; color: #2c3e50; }
-    header p { color: #6c757d; margin-top: 0.5rem; font-size: 1.1rem; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+      max-width: 500px;
+    }
+
     section {
       max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      animation: fadeInUp 1.2s ease;
+      margin: 80px auto;
+      padding: 0 20px;
     }
-    h2 { font-size: 1.8rem; margin-bottom: 1rem; color: #343a40; }
-    ul { list-style: none; padding-left: 1rem; }
-    li { margin-bottom: 1rem; position: relative; padding-left: 1rem; }
-    li::before { content: "•"; color: #0077b6; position: absolute; left: 0; }
-    .contact a {
-      display: inline-block;
-      color: #0077b6;
-      text-decoration: none;
-      margin-bottom: 0.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
-    .contact a:hover { text-decoration: underline; }
-    .tech-icons img {
-      margin-right: 10px;
-      transition: transform 0.3s;
+
+    p {
+      color: #495057;
+      line-height: 1.7;
     }
-    .tech-icons img:hover { transform: scale(1.2); }
-    .badges a { margin: 5px; display: inline-block; transition: transform 0.3s; }
-    .badges a:hover { transform: scale(1.1); }
-    canvas {
-      display: block;
-      margin: 0 auto;
-      background: #fff3cd;
-      border: 1px solid #ced4da;
-      border-radius: 8px;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
-    footer { text-align: center; padding: 2rem; color: #adb5bd; font-size: 0.9rem; }
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e9ecef;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: #868e96;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #adb5bd;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Eduarda Soares</h1>
-    <p>Estudante de Ciência da Computação | Auxiliar Administrativa | Futura Desenvolvedora</p>
-  </header>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Oi! Meu nome é <strong>Eduarda Soares</strong>, tenho 19 anos e atualmente curso o primeiro semestre de <strong>Ciência da Computação</strong>. Trabalho como <strong>Auxiliar Administrativa na Vippim Segurança</strong>, onde desenvolvo habilidades de organização, gestão de processos e suporte operacional. Sou apaixonada por <strong>design, tecnologia e programação</strong>, e tenho como objetivo atuar como desenvolvedora, unindo minha criatividade com a lógica da computação. Sou proativa, dedicada e gosto de aprender coisas novas todos os dias.</p>
-  </section>
+<div id="particles-js"></div>
 
-  <section id="curriculo">
-    <h2>Currículo</h2>
-    <ul>
-      <li><strong>Formação Acadêmica:</strong> Ciência da Computação (1º semestre)</li>
-      <li><strong>Experiência Profissional:</strong> Auxiliar Administrativa – Vippim Segurança (2025 – atual)</li>
-      <li><strong>Idiomas:</strong> Português (nativo), Inglês intermediário</li>
-      <li><strong>Certificações:</strong> Git e GitHub (em andamento), Fundamentos de Lógica de Programação</li>
-    </ul>
-  </section>
+<header>
+  <h1>Eduarda Soares</h1>
+  <p class="subtitle">
+    Estudante de Ciência de Dados, focada em transformar dados em soluções inteligentes.
+    Tenho interesse em análise de dados, banco de dados e desenvolvimento de projetos práticos.
+  </p>
+</header>
 
-  <section id="projetos">
-    <h2>Projetos Acadêmicos e Profissionais</h2>
-    <ul>
-      <li><strong>PortfolioHUB</strong> – Criação de um portfólio acadêmico com GitHub Pages, integração com Google Workspace e Gemini para automação.</li>
-      <li><strong>Simulador de Hotel</strong> – Projeto de lógica matemática e teoria dos conjuntos para simular gerenciamento de hospedagens.</li>
-      <li><strong>Apresentação: Robôs na Indústria, Saúde e Casa</strong> – Seminário explorando linguagens de programação e movimentação de robôs.</li>
-    </ul>
-  </section>
+<section>
+  <h2>Sobre mim</h2>
+  <p>
+    Atualmente curso Ciência de Dados e venho desenvolvendo projetos acadêmicos focados em lógica, análise e estruturação de dados.
+    Tenho experiência com organização de informações, criação de datasets e desenvolvimento de soluções baseadas em dados.
+    Busco evoluir constantemente e construir projetos que gerem impacto real.
+  </p>
+</section>
 
-  <section id="habilidades">
-    <h2>Habilidades & Competências</h2>
-    <div class="tech-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" height="30" width="40">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" height="30" width="40">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" height="30" width="40">
+<section>
+  <h2>Projetos</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="tag">Banco de Dados</div>
+      <h3>Criação de Dataset</h3>
+      <p>
+        Desenvolvimento de um dataset estruturado para simulação de análise de dados,
+        aplicando conceitos de modelagem e organização de informações.
+      </p>
     </div>
-    <ul>
-      <li><strong>Técnicas:</strong> HTML, CSS, Git, GitHub, Python básico</li>
-      <li><strong>Pessoais:</strong> Proatividade, comunicação, organização, aprendizado rápido</li>
-      <li><strong>Extras:</strong> Design gráfico, criação de apresentações, trabalho em equipe</li>
-    </ul>
-  </section>
 
-  <section id="recomendacoes">
-    <h2>Recomendações & Testemunhos</h2>
-    <ul>
-      <li>"Eduarda é uma aluna dedicada, curiosa e criativa. Sempre busca ir além do conteúdo e tem grande potencial para crescer na área da computação." – <em>Professor de Lógica de Programação</em></li>
-      <li>"No ambiente profissional, Eduarda se destaca pela responsabilidade e pela rapidez em aprender novas tarefas." – <em>Supervisora na Vippim Segurança</em></li>
-    </ul>
-  </section>
-
-  <section id="joguinho">
-    <h2>Mini Joguinho 🎮</h2>
-    <canvas id="gameCanvas" width="300" height="150"></canvas>
-    <script>
-      const canvas = document.getElementById("gameCanvas");
-      const ctx = canvas.getContext("2d");
-      let x = 150, y = 75, dx = 2, dy = 2;
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.beginPath();
-        ctx.arc(x, y, 10, 0, Math.PI * 2);
-        ctx.fillStyle = "#0077b6";
-        ctx.fill();
-        ctx.closePath();
-        x += dx; y += dy;
-        if (x + 10 > canvas.width || x - 10 < 0) dx = -dx;
-        if (y + 10 > canvas.height || y - 10 < 0) dy = -dy;
-      }
-      setInterval(draw, 20);
-    </script>
-  </section>
-
-  <section id="contato">
-    <h2>Contato & Redes</h2>
-    <div class="badges">
-      <a href="https://www.youtube.com/@eduarwda" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
-      <a href="https://www.instagram.com/imsoaares/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-      <a href="https://discord.com/users/eduarwda%233069" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
-      <a href="mailto:dudasoaresdepaiva@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-      <a href="https://www.linkedin.com/in/eduarda-soares-de-paiva-95567b324/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-      <a href="https://github.com/eduarwda" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+    <div class="card">
+      <div class="tag">Lógica</div>
+      <h3>Simulador de Hotel</h3>
+      <p>
+        Projeto utilizando lógica matemática e teoria dos conjuntos para simular um sistema de gerenciamento.
+      </p>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Eduarda Soares. Todos os direitos reservados.
-  </footer>
+    <div class="card">
+      <div class="tag">Web</div>
+      <h3>PortfolioHUB</h3>
+      <p>
+        Desenvolvimento de um portfólio digital com GitHub Pages, apresentando projetos e habilidades.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="tag">Apresentação</div>
+      <h3>Robótica</h3>
+      <p>
+        Seminário sobre aplicações de robôs na indústria, saúde e ambiente doméstico.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Habilidades</h2>
+  <p>
+    HTML, CSS, Git, GitHub, Python básico, organização de dados, criação de datasets,
+    pensamento lógico e resolução de problemas.
+  </p>
+</section>
+
+<section>
+  <h2>Contato</h2>
+  <p>Email: dudasoaresdepaiva@gmail.com</p>
+  <p>LinkedIn: linkedin.com/in/eduarda-soares-de-paiva</p>
+</section>
+
+<footer>
+  © 2026 Eduarda Soares
+</footer>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 40 },
+    color: { value: "#adb5bd" },
+    shape: { type: "circle" },
+    opacity: { value: 0.3 },
+    size: { value: 2 },
+    move: { speed: 1 }
+  }
+});
+</script>
+
 </body>
 </html>
